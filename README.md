@@ -15,10 +15,6 @@ for that library: the build recipe and every pin and checksum.
 | from the system (Linux) | glibc, libstdc++, zlib, OpenSSL 3, FreeType, HarfBuzz, FriBidi, Fontconfig, libEGL, libdrm, libva, PulseAudio and ALSA client libraries: each is on any distribution that runs a GTK 3 app (`BUILDINFO` lists the exact `NEEDED` names and the newest glibc symbol). |
 | from Windows | only system DLLs (`BUILDINFO` lists the imports). The ANGLE DLLs ship beside it.|
 
-Every version and checksum is in `sources.lock`; `build.sh fetch`
-refuses a download whose SHA-256 differs.
-
-
 ### DTS-HD MA and TrueHD
 
 FFmpeg's `dca` decoder runs with its defaults, so a DTS-HD MA stream decodes
@@ -56,8 +52,10 @@ result in place of the library beside the app: `lib/libmpv.so.2` on Linux,
 
 `leyla-libmpv-<tag>-source.tar.xz` holds every source tarball exactly as
 fetched, libplacebo's tree with its submodules at the pinned commit, this
-recipe and both `BUILDINFO` files. It is attached to every Leyla release that
-ships a desktop app.
+recipe and both `BUILDINFO` files. It is published with every Leyla release that
+ships a desktop app, for example
+<https://leyla.media/dl/v0.15.0/leyla-libmpv-0.41.0-ffmpeg8.1.3-b0708471d18c-source.tar.xz>
+(SHA-256 `266a564e8c6a15051ff6e8fa2d511ff52a00363acba4668fbd6a7bcda21d2791`).
 
 ## Licence
 
